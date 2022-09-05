@@ -1,4 +1,4 @@
-package com.example.domain;
+/*package com.example.domain;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -15,12 +15,12 @@ import javax.persistence.*;
 @JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class)
 public class Files {
 
-    @Id
+  *//*  @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String filename;
 
     @ManyToOne
-    private Post post;
+    private Post post;*//*
 
-}
+}*/

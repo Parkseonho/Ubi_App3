@@ -28,6 +28,6 @@ public class Post {
 
     private LocalDateTime modifyDate;
 
-    @OneToMany
-    private Files files;
+   /* @OneToMany(mappedBy = "post", cascade = CascadeType.REMOVE)
+    private List<Files> filesList;*/
 }

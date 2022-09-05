@@ -1,3 +1,4 @@
+/*
 package com.example.dao;
 
 import com.example.domain.Files;
@@ -8,3 +9,4 @@ import org.springframework.stereotype.Repository;
 public interface FilesRepository extends JpaRepository<Files, Long> {
 
 }
+*/

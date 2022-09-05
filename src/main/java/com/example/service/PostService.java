@@ -5,7 +5,7 @@ import com.example.domain.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class PostService {
@@ -15,11 +15,14 @@ public class PostService {
 
     public Post create(String content) {
         Post post = new Post();
-        post.setContent(content);
+    /*    post.setContent(content);
         post.setCreateDate(LocalDateTime.now());
         post.setModifyDate(LocalDateTime.now());
-        post.setReplyLike(0);
+        post.setReplyLike(0);*/
         this.postRepository.save(post);
         return post;
+    }
+    public List<Post> getPost() {
+        return postRepository.findAll();
     }
 }

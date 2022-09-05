@@ -1,16 +1,9 @@
+/*
 package com.example.service;
 
-import com.example.Form.PostForm;
 import com.example.dao.FilesRepository;
-import com.example.domain.Files;
-import com.example.domain.Post;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -18,7 +11,8 @@ public class FilesService {
     private final FilesRepository filesRepository;
     private final PostService postService;
 
-    /*
+    */
+/*
     public Files createTodo(Files todo) {
         Files newTodo = new Files();
         todoRepository.save(newTodo);
@@ -28,9 +22,11 @@ public class FilesService {
 
     public List<Files> getTodos() {
         return todoRepository.findAll();
-    }*/
+    }*//*
 
-    public void upload(PostForm postForm, List<MultipartFile> multiFileList) {
+
+    */
+/*public void upload(PostForm postForm, List<MultipartFile> multiFileList) {
         String root = System.getProperty("user.dir")+
                 "\\src\\main\\resources\\static\\uploadFiles";
         File fileCheck = new File(root);
@@ -75,6 +71,8 @@ public class FilesService {
             files.setPost(post);
             filesRepository.save(files);
         }
-    }
+    }*//*
+
 
 }
+*/
