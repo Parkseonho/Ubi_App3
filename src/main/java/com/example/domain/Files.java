@@ -1,4 +1,4 @@
-package com.example.todolist.domain;
+package com.example.domain;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;

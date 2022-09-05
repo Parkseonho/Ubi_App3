@@ -1,18 +1,7 @@
-package com.example.todolist.controller;
+package com.example.controller;
 
-import com.example.todolist.domain.Files;
-import com.example.todolist.service.FilesService;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-
-@CrossOrigin(origins = "*", allowedHeaders = "*")
-@Controller
-public class FilesController {
-
-    private final FilesService todoService;
-
+public class PostController {
+/*
     FilesController(FilesService todoService) {
         this.todoService = todoService;
     }
@@ -29,5 +18,5 @@ public class FilesController {
 
         todoService.createTodo(todo);
         return todoService.getTodos();
-    }
+    }*/
 }

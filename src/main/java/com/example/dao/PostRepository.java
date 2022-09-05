@@ -1,6 +1,6 @@
-package com.example.todolist.dao;
+package com.example.dao;
 
-import com.example.todolist.domain.Post;
+import com.example.domain.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PostRepository extends JpaRepository<Post, Integer> {
