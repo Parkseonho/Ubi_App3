@@ -17,12 +17,12 @@ public class PostController {
     }
 
     @GetMapping("")
-    public List<Post> getPost(){
+    public List<Post> getPosts(){
         return postService.getPost();
     }
 
     @PostMapping("")
-    public List<Post> createPost(@RequestBody Post post){
+    public List<Post> createPosts(@RequestBody Post post){
 
         postService.create(post);
         return postService.getPost();
