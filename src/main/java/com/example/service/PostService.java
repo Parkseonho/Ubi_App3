@@ -19,7 +19,7 @@ public class PostService {
         post.setContent(post.getContent());
         post.setCreateDate(LocalDateTime.now());
         post.setModifyDate(LocalDateTime.now());
-        post.setReplyLike(0);
+        post.setReplyLike(false);
         postRepository.save(post);
         return post;
     }

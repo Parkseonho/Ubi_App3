@@ -17,9 +17,9 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(columnDefinition = "integer default 0", nullable = false)
+    @Column(columnDefinition = "false", nullable = false)
 
-    private Integer replyLike;
+    private Boolean replyLike;
 
     @Column(columnDefinition = "TEXT")
     private String content;
