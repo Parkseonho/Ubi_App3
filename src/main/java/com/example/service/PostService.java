@@ -26,4 +26,14 @@ public class PostService {
     public List<Post> getPost() {
         return postRepository.findAll();
     }
+
+    public void Like(Integer id) {
+        Post post = postRepository.findById(id).get();
+        if(post.getReplyLike() == true) {
+            post.setReplyLike(false);
+        } else {
+            post.setReplyLike(true);
+        }
+        this.postRepository.save(post);
+    }
 }

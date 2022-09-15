@@ -32,6 +32,13 @@ public class PostController {
         return postService.getPost();
     }
 
+    @PatchMapping("/{id}")
+    public List<Post> createPosts(@PathVariable Integer id) {
+        postService.Like(id);
+
+        return postService.getPost();
+    }
+
   /*  @PostMapping("")
     public List<Post> createPosts(@RequestBody Post post,
                                   @RequestParam("multiFile") List<MultipartFile> multiFileList)
