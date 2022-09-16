@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -28,6 +29,6 @@ public class Post {
 
     private LocalDateTime modifyDate;
 
-  /*  @OneToMany(mappedBy = "post", cascade = CascadeType.REMOVE)
-    private List<Files> filesList;*/
+    @OneToMany(mappedBy = "post", cascade = CascadeType.REMOVE)
+    private List<Files> filesList;
 }
