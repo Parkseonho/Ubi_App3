@@ -21,6 +21,10 @@ public class User {
     private String email;
 
     private String password;
+
+    private String phone;
+
+    private String content;
     private String roles;
 
    /* @Transient
