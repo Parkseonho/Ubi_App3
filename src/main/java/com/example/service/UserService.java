@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.example.dao.UserRepository;
 import com.example.domain.User;
+import com.example.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,19 +13,23 @@ import java.util.Optional;
 public class UserService {
     private final UserRepository userRepository;
 
-    public void join(User user){
+    public void join(User user) {
         userRepository.save(user);
     }
 
-    public User login(User user){
+    public UserDto login(User user) throws Exception {
         Optional<User> opUser = userRepository.findByEmail(user.getEmail());
-        if(opUser.isPresent()){
+        if (opUser.isPresent()) {
             User loginedUser = opUser.get();
-            if(loginedUser.getPassword().equals(user.getPassword())){
-                return loginedUser;
+            if (loginedUser.getPassword().equals(user.getPassword())) {
+                UserDto userDto = new UserDto();
+                userDto.setId(loginedUser.getId());
+                userDto.setEmail(loginedUser.getEmail());
+                userDto.setUsername(loginedUser.getUsername());
+                return userDto;
             }
-            return null;
+            throw new Exception();
         }
-        return null;
+        throw new Exception();
     }
 }

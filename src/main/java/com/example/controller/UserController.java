@@ -2,6 +2,7 @@ package com.example.controller;
 
 import com.example.dao.UserRepository;
 import com.example.domain.User;
+import com.example.dto.UserDto;
 import com.example.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,8 +24,8 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public User login(@RequestBody User user){
-        User loginedUser = userService.login(user);
+    public UserDto login(@RequestBody User user) throws Exception {
+        UserDto loginedUser = userService.login(user);
         return loginedUser;
     }
 
